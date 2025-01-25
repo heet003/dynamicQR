@@ -22,7 +22,6 @@ function QRCode() {
             const data = await response.json();
             setData(data);
             setShortUrl(data.ShortUrl);
-            console.log(data);
         } catch (err) {
             console.log(err);
         }
@@ -42,7 +41,6 @@ function QRCode() {
                 throw new Error("Error")
             }
             const data = await response.json();
-            console.log(data);
         } catch (err) {
             console.log(err);
         }

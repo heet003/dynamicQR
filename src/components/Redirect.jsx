@@ -7,7 +7,6 @@ function Redirect() {
 
     useEffect(() => {
         async function fetchData() {
-            console.log(ID);
             try {
                 const response = await fetch(`http://localhost:5000/qr/${ID}`, {
                     method: "GET",
@@ -19,7 +18,6 @@ function Redirect() {
                     throw new Error("Error");
                 }
                 const data = await response.json();
-                console.log(data);
                 window.location.href = data.OriginalUrl;
             } catch (err) {
                 console.error(err);
